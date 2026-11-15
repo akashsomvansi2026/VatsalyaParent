@@ -1,0 +1,2 @@
+10-18 21:54:54.632 18331 18331 I flutter : [nearby] API_ERROR_NEARBY_SEARCH: 9011: The caller does not have permission
+10-18 21:55:22.922 18331 18331 I flutter : [nearby] API_ERROR_NEARBY_SEARCH: 9011: The caller does not have permission

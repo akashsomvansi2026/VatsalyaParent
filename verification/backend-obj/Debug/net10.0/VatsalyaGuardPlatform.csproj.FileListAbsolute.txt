@@ -1,0 +1,8 @@
+D:\Android Work Space\Projects\untitled\verification\backend-obj\Debug\net10.0\VatsalyaGuardPlatform.csproj.AssemblyReference.cache
+D:\Android Work Space\Projects\untitled\verification\backend-obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\Android Work Space\Projects\untitled\verification\backend-obj\Debug\net10.0\VatsalyaGuardPlatform.GeneratedMSBuildEditorConfig.editorconfig
+D:\Android Work Space\Projects\untitled\verification\backend-obj\Debug\net10.0\VatsalyaGuardPlatform.AssemblyInfoInputs.cache
+D:\Android Work Space\Projects\untitled\verification\backend-obj\Debug\net10.0\VatsalyaGuardPlatform.AssemblyInfo.cs
+D:\Android Work Space\Projects\untitled\verification\backend-obj\Debug\net10.0\VatsalyaGuardPlatform.csproj.CoreCompileInputs.cache
+D:\Android Work Space\Projects\untitled\verification\backend-obj\Debug\net10.0\VatsalyaGuardPlatform.MvcApplicationPartsAssemblyInfo.cs
+D:\Android Work Space\Projects\untitled\verification\backend-obj\Debug\net10.0\VatsalyaGuardPlatform.MvcApplicationPartsAssemblyInfo.cache
