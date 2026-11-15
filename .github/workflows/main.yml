@@ -111,14 +111,19 @@ jobs:
       # Build signed APK
       - name: Build Android APK
         if: github.event_name == 'push'
-        run: flutter build apk --release --split-per-abi --build-number=${{ github.run_number }}
+        run: |
+          flutter build apk --release \
+            --split-per-abi \
+            --build-number=${{ github.run_number }}
 
-      # Build signed AAB for Google Play
+      # Build signed AAB
       - name: Build Android App Bundle
         if: github.event_name == 'push'
-        run: flutter build appbundle --release --build-number=${{ github.run_number }}
+        run: |
+          flutter build appbundle --release \
+            --build-number=${{ github.run_number }}
 
-      # Upload APK and AAB artifacts
+      # Upload Android artifacts
       - name: Upload Android artifacts
         if: github.event_name == 'push'
         uses: actions/upload-artifact@v4
@@ -134,7 +139,7 @@ jobs:
         uses: r0adkll/upload-google-play@v1.1.5
         with:
           serviceAccountJsonPlainText: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
-          packageName: ${{ vars.ANDROID_PACKAGE_NAME }}
+          packageName: com.vrajranitech.solution
           releaseFiles: build/app/outputs/bundle/release/app-release.aab
           track: internal
           status: completed
@@ -144,7 +149,7 @@ jobs:
       - name: Build iOS
         run: flutter build ios --release --no-codesign
 
-      # Package iOS IPA
+      # Package IPA
       - name: Package IPA
         run: |
           cd build/ios/iphoneos
@@ -170,5 +175,7 @@ jobs:
             build/ios/iphoneos/app.ipa
           tag: v1.0.${{ github.run_number }}
           name: Release v1.0.${{ github.run_number }}
-          token: ${{ secrets.TOKEN }}
+          token: ${{ github.token }}
+          commit: ${{ github.sha }}
           allowUpdates: true
+          generateReleaseNotes: true
